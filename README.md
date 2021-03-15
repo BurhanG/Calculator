@@ -1,7 +1,3 @@
-# Demo
+# Calculator
 
-Some Desription!
-
-## Subheader
-
-lorem ipsum
+Just a regular calculator written with javascript
