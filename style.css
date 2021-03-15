@@ -1,6 +1,6 @@
 /* İmport Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
 /* General Styling */
 *{
     padding: 0;
@@ -8,59 +8,139 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 10px;
+}
+
+:root{
+    --background-dark-color: #22252e;
+    --background-light-color: #ffffff;
+    --container-dark-color:#292d36;
+    --container-light-color: #f9f9f9;
+    --clr-green: #3af6c3;
+    --clr-red: #e1616e;
+
+    --general-font-size: 1.4rem;
+    --primary-title-font-size: 2rem;
+    --primary-footer-font-size: 1rem;
+    --main-font-family: 'Nunito', sans-serif;
+    --font-light: 300;
+    --font-medium: 400;
+    --font-bold: 700;
+    --container-width: 126rem;
+}
+
 body{
-    font-family: 'Montserrat', sans-serif;
-    background: rgb(238,174,202);
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    font-family: 'Roboto Mono', monospace;
+    /* font-family: 'Montserrat', sans-serif; */
+    background: var(--background-dark-color);
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
+    min-height: 100vh;
+    width: 100%;
 }
 
 /* Calculator */
-.calculator-grid{
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    min-height: 100vh;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: minmax(120px,auto) repeat(5,100px);
-}
 
-.calculator-grid button{
-    cursor: pointer;
-    font-size: 2rem;
-    border: 1px solid white;
-    outline: none;
-    background: #5db0f0;
+.container{
+    width: 100%;
+    max-width: 360px;
+    color: var(--background-light-color);
 }
-
-.calculator-grid button:hover{
-    background: #ccc;
-}
-
-.span-two{
-    grid-column: span 2;
-}
-
-.output{
-    grid-column: 1 / -1;
-    background: #ccc;
+.theme-changer{
+    width: 100%;
+    min-height: 20px;
     display: flex;
-    align-items: flex-end;
-    justify-content: space-around;
-    flex-direction: column;
-    padding: 10px;
-    word-wrap: break-word;
-    word-break: break-all;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 80px;
+}
+.theme-buttons{
+    border-radius: 15px;
+    background-color: var(--container-dark-color);
+    min-height: 20px;
+    padding: 5px 8px;
+    color: grey;
+}
+.theme-buttons .active{
+    color: var(--container-light-color);
+}
+.theme-sun-icon, .theme-moon-icon{
+    height: 30px;
+    width: 30px;
+    font-size: 1.7rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.output{
+    height: 100px;
+    width: 100%;
+    text-align: right;
+    padding: 20px;
+    font-size: 30px;
 }
 
-.output .previous-operand{
-    color: rgb(238, 238, 238);
-    font-size: 1.5rem;
+.display-1{
+    opacity: .4;
+    font-size: 1.8rem;
+    overflow: hidden;
+}
+.display-2{
+    font-size: 3rem;
 }
 
-.output .current-operand{
-    color: #fff;
-    font-size: 2.5rem;
+.all-buttons{
+    background: var(--container-dark-color);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 15px;
+    padding:  30px;
+    justify-items: center;
+}
+
+.btn{
+    background: var(--background-dark-color);
+    box-shadow: 0px 4px 4px -4px rgba(0,0,0,0.6);
+    height: 55px;
+    width: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 1.9rem;
+    color: #ccc;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+.btn-green{
+    color: var(--clr-green);
+}
+
+.btn-red{
+    color: var(--clr-red);
+}
+
+.btn:hover{
+    box-shadow: none;
+    transform: scale(1.1);
+}
+.icon-redo i{
+    transform: rotateY(180deg);
+}
+
+@media screen and (min-width: 360px){
+    body{
+        align-items: center;
+    }
+    .container{
+        border-radius: 30px;
+        overflow: hidden;
+        border: 1px solid #ccc;
+    }
 }

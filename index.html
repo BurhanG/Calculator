@@ -4,16 +4,87 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
     <title>Calculator</title>
 </head>
 <body>
-    <div class="calculator-grid">
-        <div class="output">
-            <div data-previous-operand class="previous-operand"></div>
-            <div data-current-operand class="current-operand"></div>
+    <div class="container">
+        <div class="theme-changer">
+            <div class="theme-buttons">
+                <div class="theme-sun-icon"><i class="far fa-sun"></i></div>
+                <div class="theme-moon-icon"><i class="far fa-moon active"></i></i></div>
+            </div>
         </div>
-        <button data-all-clear class="span-two">AC</button>
+        <div class="output">
+            <div data-previous-operand class="display-1">569 x 42</div>
+            <div data-current-operand class="display-2">12,936</div>
+        </div>
+        <div class="all-buttons">
+            <div class="btn btn-green" data-all-clear>
+                AC
+            </div>
+            <div class="btn btn-green" data-sign-changer>
+                +/-
+            </div>
+            <div class="btn btn-green" data-operation>
+                %
+            </div>
+            <div class="btn btn-red" data-operation>
+                /
+            </div>
+            <div class="btn" data-number>
+                7
+            </div>
+            <div class="btn" data-number>
+                8
+            </div>
+            <div class="btn" data-number>
+                9
+            </div>
+            <div class="btn btn-red" data-operation>
+                X
+            </div>
+            <div class="btn" data-number>
+                4
+            </div>
+            <div class="btn" data-number>
+                5
+            </div>
+            <div class="btn" data-number>
+                6
+            </div>
+            <div class="btn btn-red" data-operation>
+                -
+            </div>
+            <div class="btn" data-number>
+                1
+            </div>
+            <div class="btn" data-number>
+                2
+            </div>
+            <div class="btn" data-number>
+                3
+            </div>
+            <div class="btn btn-red" data-operation>
+                +
+            </div>
+            <div class="btn" data-redo>
+                <span class="icon-redo">
+                    <i class="fas fa-redo"></i>
+                </span>
+            </div>
+            <div class="btn" data-number>
+                0
+            </div>
+            <div class="btn">
+                .
+            </div>
+            <div class="btn btn-red">
+                =
+            </div>
+        </div>
+        <!-- <button data-all-clear class="span-two">AC</button>
         <button data-delete>DEL</button>
         <button data-operation>/</button>
         <button data-number>1</button>
@@ -30,7 +101,7 @@
         <button data-operation>-</button>
         <button data-number>.</button>
         <button data-number>0</button>
-        <button data-equals class="span-two">=</button>
+        <button data-equals class="span-two">=</button> -->
     </div>
     <script src="script.js"></script>
 </body>
