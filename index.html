@@ -8,17 +8,17 @@
     <link rel="stylesheet" href="style.css">
     <title>Calculator</title>
 </head>
-<body>
+<body class="theme-dark">
     <div class="container">
         <div class="theme-changer">
-            <div class="theme-buttons">
+            <div class="theme-buttons" >
                 <div class="theme-sun-icon"><i class="far fa-sun"></i></div>
-                <div class="theme-moon-icon"><i class="far fa-moon active"></i></i></div>
+                <div class="theme-moon-icon active"><i class="far fa-moon"></i></i></div>
             </div>
         </div>
         <div class="output">
-            <div data-previous-operand class="display-1">569 x 42</div>
-            <div data-current-operand class="display-2">12,936</div>
+            <div data-previous-operand class="display-1"></div>
+            <div data-current-operand class="display-2">0</div>
         </div>
         <div class="all-buttons">
             <div class="btn btn-green" data-all-clear>
@@ -69,7 +69,7 @@
             <div class="btn btn-red" data-operation>
                 +
             </div>
-            <div class="btn" data-redo>
+            <div class="btn" data-delete>
                 <span class="icon-redo">
                     <i class="fas fa-redo"></i>
                 </span>
@@ -77,10 +77,10 @@
             <div class="btn" data-number>
                 0
             </div>
-            <div class="btn">
+            <div class="btn" data-number>
                 .
             </div>
-            <div class="btn btn-red">
+            <div class="btn btn-red" data-equals>
                 =
             </div>
         </div>

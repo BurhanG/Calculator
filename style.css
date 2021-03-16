@@ -13,13 +13,6 @@ html {
 }
 
 :root{
-    --background-dark-color: #22252e;
-    --background-light-color: #ffffff;
-    --container-dark-color:#292d36;
-    --container-light-color: #f9f9f9;
-    --clr-green: #3af6c3;
-    --clr-red: #e1616e;
-
     --general-font-size: 1.4rem;
     --primary-title-font-size: 2rem;
     --primary-footer-font-size: 1rem;
@@ -29,11 +22,26 @@ html {
     --font-bold: 700;
     --container-width: 126rem;
 }
+.theme-dark{
+    --background-color: #22252e;
+    --container-color:#292d36;
+    --font-color: #ccc;
+    --clr-green: #3af6c3;
+    --clr-red: #e1616e;
+}
+.theme-light{
+    --background-color: #f9f9f9;
+    --container-color: #f3f3f3;
+    --font-color: #22252e;
+    --clr-green: #3af6c3;
+    --clr-red: #e1616e;
+}
+
 
 body{
     font-family: 'Roboto Mono', monospace;
     /* font-family: 'Montserrat', sans-serif; */
-    background: var(--background-dark-color);
+    background: var(--background-color);
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -46,7 +54,7 @@ body{
 .container{
     width: 100%;
     max-width: 360px;
-    color: var(--background-light-color);
+    color: var(--font-color);
 }
 .theme-changer{
     width: 100%;
@@ -59,13 +67,13 @@ body{
 }
 .theme-buttons{
     border-radius: 15px;
-    background-color: var(--container-dark-color);
+    background-color: var(--container-color);
     min-height: 20px;
     padding: 5px 8px;
     color: grey;
 }
 .theme-buttons .active{
-    color: var(--container-light-color);
+    color: var(--font-color);
 }
 .theme-sun-icon, .theme-moon-icon{
     height: 30px;
@@ -93,7 +101,7 @@ body{
 }
 
 .all-buttons{
-    background: var(--container-dark-color);
+    background: var(--container-color);
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     display: grid;
@@ -105,7 +113,7 @@ body{
 }
 
 .btn{
-    background: var(--background-dark-color);
+    background: var(--background-color);
     box-shadow: 0px 4px 4px -4px rgba(0,0,0,0.6);
     height: 55px;
     width: 55px;
@@ -114,7 +122,7 @@ body{
     justify-content: center;
     border-radius: 5px;
     font-size: 1.9rem;
-    color: #ccc;
+    color: var(--font-color);
     transition: all 0.4s;
     cursor: pointer;
 }
